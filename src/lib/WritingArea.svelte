@@ -785,4 +785,31 @@
       opacity: 1;
     }
   }
+
+  @media (max-width: 768px) { 
+    .app-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr auto;
+    }
+    .saved-texts {
+      order: 1;
+    }
+
+    .achievements-panel {
+      order: 2;
+    }
+    footer {
+      order: 3;
+    }
+
+    .unlocked-icon[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    top: auto;
+    left: 100%;
+    right: 100%;
+    bottom: 0;
+    transform: translateX(-20%);
+  }
+
+  }
 </style>
